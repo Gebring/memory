@@ -1,0 +1,86 @@
+/* 
+Background settings
+*/
+
+$bgImgUrl:url("../img/bg_transp.svg");
+$bgProperties:repeat;
+$bgDeg:90deg;
+$bgGradient1:#e1cdbb;
+$bgGradient2:#f449bb;
+
+@mixin bodyBgSettings() {
+	background:$bgImgUrl $bgProperties, -webkit-linear-gradient($bgDeg,$bgGradient1,$bgGradient2);
+	background:$bgImgUrl $bgProperties, -o-linear-gradient($bgDeg,$bgGradient1,$bgGradient2);
+	background:$bgImgUrl $bgProperties, -moz-linear-gradient($bgDeg,$bgGradient1,$bgGradient2);
+	background:$bgImgUrl $bgProperties, linear-gradient($bgDeg,$bgGradient1,$bgGradient2);
+	background-image:$bgImgUrl $bgProperties;
+  background-size: cover;
+}
+
+
+/*
+Gamearea
+*/
+
+@mixin gameAreaBase {
+	clear:both;
+	margin:0 auto;
+	overflow:auto;
+}
+
+
+/*
+Card wrap
+*/
+
+@mixin cardWrapBase {
+	float:left;
+}
+
+
+/*
+Margins & paddings
+*/
+
+$tabletDefaultSpacing:10px;
+
+
+/*
+Metrics
+*/
+
+$cardSize320:140px;  
+$cardSize640:140px;
+$cardSizeTablet:180px;
+
+
+/*
+Clearfix
+*/
+.clearfix {
+	clear:both;
+}
+.nextButton {
+  z-index: 20;
+  text-decoration: none;
+  display: none;
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  background: #00FF00;
+  font-size: 200%;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -100px;
+  border-radius: 50%;
+}
+.checkBox {
+  font-size: 900%;
+}
+
+/* Slut på gå vidare knappen */
+
+
+

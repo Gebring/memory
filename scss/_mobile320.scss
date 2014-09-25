@@ -1,0 +1,158 @@
+//*** WRAPPER FOR ALL CARDS =====================
+header {
+  float:left;
+  height:85px;
+  max-width:100%;
+  & .menu-links {
+    float:left;
+    padding-right:5px;
+    margin-left: -20px
+  }
+  & .toggle-menu {
+    margin-top:5px;
+  }
+  & .toggle-menu li {
+    display:block;
+    float:left; 
+  }
+  & a {
+    padding-right:5px;
+  }
+}
+#gameArea {
+  @include gameAreaBase;
+  padding: 0;
+  max-width:325px;
+}
+
+
+//
+//*** CARD CONTAINER ============================
+
+.cardWrap {
+  @include cardWrapBase;
+  margin: 5px;
+  width: $cardSize320; /* Ändra för storlek på kortet */
+  height: $cardSize320; /* Ändra för storlek på kortet */
+
+  /* position: relative; */
+  /* z-index: 1; */
+}
+//
+//*** CARD SIZE FACE UP =========================
+
+.animalSize {
+  width: $cardSize320; /* Ändra för storlek på kortet */
+  height: $cardSize320; /* Ändra för storlek på kortet */
+}
+//
+//*** CARD SIZE FACE DOWN =======================
+
+.faceDown {
+  width: $cardSize320; /* Ändra för storlek på kortet */
+  height: $cardSize320; /* Ändra för storlek på kortet */
+}
+.clearfix {
+  display: none;
+}
+//*** CARDCOLUMNS  =======================
+/*
+.cards-two {
+  width: 90px;
+}*/
+.cards-two {
+  width: 300  px;
+}
+.cards-three {
+  width: 300px
+}
+
+//
+
+@keyframes pointer{
+  0%   {left:-200px; bottom:-300px;}
+  5%   {left:-200px; bottom:-300px;}
+  10%  {left:-200px; bottom:-300px;}
+  15%  {left:-200px; bottom:-200px;}
+  20%  {left:30px; bottom:100px; max-height: 60%; max-width: 50%;}
+  25%  {left:30px; bottom:100px; max-height: 50%; max-width: 40%;} 
+  30%  {left:30px; bottom:100px; max-height: 60%; max-width: 50%;}
+  35%  {left:170px; bottom:100px; max-height: 60%; max-width: 60%;}
+  40%  {left:170px; bottom:100px; max-height: 50%; max-width: 50%;} 
+  45%  {left:170px; bottom:100px; max-height: 60%; max-width: 60%;}
+  100% {left:400px; bottom:-200px; max-height: 60%; max-width: 30%; display:none;}
+}
+
+@-webkit-keyframes pointer /* Safari and Chrome */{
+  0%   {left:-200px; bottom:-300px;}
+  5%   {left:-200px; bottom:-300px;}
+  10%  {left:-200px; bottom:-300px;}
+  15%  {left:-200px; bottom:-200px;}
+  20%  {left:30px; bottom:100px; max-height: 60%; max-width: 50%;}
+  25%  {left:30px; bottom:100px; max-height: 50%; max-width: 40%;} 
+  30%  {left:30px; bottom:100px; max-height: 60%; max-width: 50%;}
+  35%  {left:170px; bottom:100px; max-height: 60%; max-width: 60%;}
+  40%  {left:170px; bottom:100px; max-height: 50%; max-width: 50%;} 
+  45%  {left:170px; bottom:100px; max-height: 60%; max-width: 60%;}
+  100% {left:400px; bottom:-200px; max-height: 60%; max-width: 30%; display:none;}
+}
+
+.clickFinger {
+  max-width:173px;
+  max-height:455px;
+  bottom: -455px;
+  left: -173px;
+  position:absolute;
+  animation:pointer 10s;
+  -webkit-animation:pointer 6s; /* Safari and Chrome */
+  z-index: 2;
+}
+
+@keyframes pointerTwo{
+  0%   {left:-200px; bottom:-300px;}
+  5%   {left:-200px; bottom:-300px;}
+  10%  {left:-200px; bottom:-300px;}
+  15%  {left:-200px; bottom:-200px;}
+  20%  {left:30px; bottom:100px; max-height: 60%; max-width: 60%;}
+  25%  {left:30px; bottom:100px; max-height: 50%; max-width: 50%;} 
+  30%  {left:30px; bottom:100px; max-height: 60%; max-width: 60%;}
+  35%  {left:170px; bottom:100px; max-height: 60%; max-width: 60%;}
+  40%  {left:170px; bottom:100px; max-height: 50%; max-width: 50%;} 
+  50%  {left:170px; bottom:100px; max-height: 60%; max-width: 60%;}
+  60%  {left:30px; bottom:-30px; max-height: 50%; max-width: 50%;}
+  65%  {left:30px; bottom:-30px; max-height: 60%; max-width: 60%;}
+  70%  {left:170px; bottom:-30px; max-height: 60%; max-width: 60%;}
+  75%  {left:170px; bottom:-30px; max-height: 50%; max-width: 50%;}
+  80%  {left:170px; bottom:-30px; max-height: 60%; max-width: 60%;}
+  100% {left:400px; bottom:-200px; max-height: 60%; max-width: 60%; display:none;}
+}
+
+@-webkit-keyframes pointerTwo /* Safari and Chrome */{
+  0%   {left:-200px; bottom:-300px;}
+  5%   {left:-200px; bottom:-300px;}
+  10%  {left:-200px; bottom:-300px;}
+  15%  {left:-200px; bottom:-200px;}
+  20%  {left:30px; bottom:100px; max-height: 60%; max-width: 60%;}
+  25%  {left:30px; bottom:100px; max-height: 50%; max-width: 50%;} 
+  30%  {left:30px; bottom:100px; max-height: 60%; max-width: 60%;}
+  35%  {left:170px; bottom:100px; max-height: 60%; max-width: 60%;}
+  40%  {left:170px; bottom:100px; max-height: 50%; max-width: 50%;} 
+  50%  {left:170px; bottom:100px; max-height: 60%; max-width: 60%;}
+  60%  {left:30px; bottom:-30px; max-height: 50%; max-width: 50%;}
+  65%  {left:30px; bottom:-30px; max-height: 60%; max-width: 60%;}
+  70%  {left:170px; bottom:-30px; max-height: 60%; max-width: 60%;}
+  75%  {left:170px; bottom:-30px; max-height: 50%; max-width: 50%;}
+  80%  {left:170px; bottom:-30px; max-height: 60%; max-width: 60%;}
+  100% {left:400px; bottom:-200px; max-height: 60%; max-width: 60%; display:none;}
+}
+
+.clickFinger2 {
+  max-width:173px;
+  max-height:455px;
+  bottom: -455px;
+  left: -173px;
+  position:absolute;
+  animation:pointerTwo 10s;
+  -webkit-animation:pointerTwo 6s; /* Safari and Chrome */
+  z-index: 2;
+}

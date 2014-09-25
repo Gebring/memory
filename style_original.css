@@ -1,0 +1,153 @@
+img {display: block;}
+
+
+body {
+background:url("../img/bg_transp.png") center no-repeat, -webkit-linear-gradient(90deg, #e1cdbb, #f449bb);
+background:url("../img/bg_transp.png") center no-repeat, -o-linear-gradient(90deg, #e1cdbb, #f449bb);
+background:url("../img/bg_transp.png") center no-repeat, -moz-linear-gradient(90deg, #e1cdbb, #f449bb);
+background:url("../img/bg_transp.png") center no-repeat, linear-gradient(90deg, #e1cdbb, #f449bb);
+background-image:url("../img/bg_transp.png") center no-repeat;
+}
+
+#gameArea {
+
+  clear:both;
+  margin:0 auto;
+  padding:10px;
+  max-width:330px;
+}
+
+.cardWrap {
+  float:left;
+  /* position: relative; */
+  margin:5px;
+  width: 150px; /* Ändra för storlek på kortet */
+  height: 150px; /* Ändra för storlek på kortet */
+  /* z-index: 1; */
+}
+.animalSize {
+  width: 150px; /* Ändra för storlek på kortet */
+  height: 150px; /* Ändra för storlek på kortet */
+}
+.faceDown {
+  width: 150px; /* Ändra för storlek på kortet */
+  height: 150px; /* Ändra för storlek på kortet */
+}
+.card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+       -o-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 0.5s linear;
+     -moz-transition: all 0.5s linear;
+      -ms-transition: all 0.5s linear;
+       -o-transition: all 0.5s linear;
+          transition: all 0.5s linear; 
+}
+.face {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+       -o-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.face.back {
+  display: block;
+  color: white;
+  text-align: center;
+  background-color: #aaa;
+  -webkit-transform: rotateY(180deg);
+     -moz-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+       -o-transform: rotateY(180deg);
+          transform: rotateY(180deg);  
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+       -o-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.rotate {
+  -webkit-transform: rotateY(180deg);
+     -moz-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+       -o-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.shadow {
+  -moz-box-shadow:    3px 3px 3px 3px #000;
+  -webkit-box-shadow: 3px 3px 3px 3px #000;
+  box-shadow:         3px 3px 3px 3px #000;
+}
+
+    @-webkit-keyframes spaceboots {
+    0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+    10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+    30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+    40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+    50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+    70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+    80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+    90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+    100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+    }
+    .shake:hover,
+    .shake:focus {
+    -webkit-animation-name: spaceboots;
+    -webkit-animation-duration: 0.8s;
+    -webkit-transform-origin:50% 50%;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    }
+    .shake {
+    display:inline-block
+    }
+
+    @-moz-keyframes spaceboots {
+    0% { -moz-transform: translate(2px, 1px) rotate(0deg); }
+    10% { -moz-transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { -moz-transform: translate(-3px, 0px) rotate(1deg); }
+    30% { -moz-transform: translate(0px, 2px) rotate(0deg); }
+    40% { -moz-transform: translate(1px, -1px) rotate(1deg); }
+    50% { -moz-transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { -moz-transform: translate(-3px, 1px) rotate(0deg); }
+    70% { -moz-transform: translate(2px, 1px) rotate(-1deg); }
+    80% { -moz-transform: translate(-1px, -1px) rotate(1deg); }
+    90% { -moz-transform: translate(2px, 2px) rotate(0deg); }
+    100% { -moz-transform: translate(1px, -2px) rotate(-1deg); }
+    }
+    .shake {
+    -moz-animation-name: spaceboots;
+    -moz-animation-duration: 0.8s;
+    -moz-transform-origin:50% 50%;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    display:inline-block;
+    } 
+    .shake:hover,
+    .shake:focus {
+    -moz-animation-name: spaceboots;
+    -moz-animation-duration: 0.8s;
+    -moz-transform-origin:50% 50%;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    cursor:pointer;
+    }
+    .shake {
+    display:inline-block
+    }
+    .shakeActive {
+    -moz-animation-name: spaceboots;
+    -moz-animation-duration: 0.0s;
+    -moz-transform-origin:50% 50%;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    cursor:pointer;
+    }
